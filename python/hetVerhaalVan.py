@@ -386,7 +386,7 @@ def vraag1():
 
 #START------------------------------------------------------------------
 def start():
-    tekst = "Je woont in Syrië met je vader, en bent vrijgesteld van de militaire dienstplicht. Tot je hoorde dat de zoon van een goede huisvriend, ook enig kind, was opgepakt en het leger in moest. “Ik geef je nog een paar weken en dan wil ik dat je weg bent”, zegt je vader ongerust. Sinds de scheiding van je ouders woonde je bij hem. Je twijfelt nog of je wilt vluchten, of hier wilt blijven met je vader. Je besluit om... "
+    tekst = "\nJe woont in Syrië met je vader, en bent vrijgesteld van de militaire dienstplicht. Tot je hoorde dat de zoon van een goede huisvriend, ook enig kind, was opgepakt en het leger in moest. “Ik geef je nog een paar weken en dan wil ik dat je weg bent”, zegt je vader ongerust. Sinds de scheiding van je ouders woonde je bij hem. Je twijfelt nog of je wilt vluchten, of hier wilt blijven met je vader. Je besluit om... "
     for char in tekst:
         time.sleep(0.01)
         sys.stdout.write(char)
@@ -405,4 +405,10 @@ def start():
     else:
         print("ongeldig antwoord")    
 
-start()
+game = True
+
+while game:
+    start()
+    opnieuw = input("\n\u001b[37mwil je opnieuw beginnen? JA/NEE: ")
+    if opnieuw == "NEE":
+        game = False
