@@ -405,6 +405,7 @@ def start():
     else:
         print("ongeldig antwoord")    
 
+#-------------------------------------------------------------------------
 game = True
 
 while game:
